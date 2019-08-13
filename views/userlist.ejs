@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>成员列表-班级说说</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <style>
+        .one{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<%include header.ejs%>
+
+
+<div class="container">
+
+    <!-- Example row of columns -->
+    <div class="row col-lg-12">
+        <%for(var i = 0 ; i < chengyuan.length ; i++){%>
+        <div class="one">
+            <img src="images/moren.jpg" alt=""/>
+            <span><%=chengyuan[i].username%></span>
+        </div>
+        <%}%>
+    </div>
+</div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2019 Company, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+
+</body>
+</html>

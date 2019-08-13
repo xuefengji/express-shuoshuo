@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title><%=user%>个人主页-班级说说</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+</head>
+
+<body>
+
+<%include header.ejs%>
+
+ Main jumbotron for a primary marketing message or call to action
+<div class="container">
+    <img src="images/moren.jpg" alt=""/>
+    <h1><%=user%>的个人主页</h1>
+    <!-- Example row of columns -->
+    <div class="row col-lg-12">
+        <%for(var i = 0 ; i < cirenshuoshuo.length ; i++){%>
+        <div class="one">
+            <p> <%=cirenshuoshuo[i].content%></p>
+            <p> <%=cirenshuoshuo[i].date%></p>
+        </div>
+        <%}%>
+    </div>
+</div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2019 Company, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+
+</body>
+</html>
